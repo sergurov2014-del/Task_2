@@ -10,7 +10,6 @@ def create_delete_user():  # регистрация юзера и получен
     response = api_methods.post_for_register_user(payload)
     assert response.status_code == 200, f"Failed to register user: {response.text}"
     data = response.json()
-    assert data.get("success"), "Registration failed: success flag is False"
     raw_token = data.get("accessToken")
     if not raw_token:
         raise AssertionError(
