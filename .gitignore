@@ -1,0 +1,6 @@
+allure generate allure-results -o allure-report --clean# Created by pytest automatically.
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv
+.vscode
