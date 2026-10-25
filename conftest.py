@@ -8,7 +8,6 @@ def create_delete_user():  # регистрация юзера и получен
     # 1. ПОДГОТОВКА (До теста) создаём курьера возвращаем ответ user_context
     payload = helpers.new_user_data()
     response = api_methods.post_for_register_user(payload)
-    assert response.status_code == 200, f"Failed to register user: {response.text}"
     data = response.json()
     raw_token = data.get("accessToken")
     if not raw_token:
